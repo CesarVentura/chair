@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.10460565600132206 0.9773356188592912 0.18404549666171954 4.122887555040968
-  position -1.0073577867377217 0.5248550768874405 -0.5520092108600805
+  orientation 0.9560389794285374 -0.21697884846299498 -0.1972552892393838 4.794109523025056
+  position 0.5538296980779744 2.033410492889683 0.3015333882973551
 }
 TexturedBackground {
 }
@@ -57,6 +57,7 @@ Solid {
           ]
         }
         DEF B_SUPORTS_STANDINGS Transform {
+          translation 0.19 0.2 0.09
           children [
             Group {
               children [
@@ -75,6 +76,25 @@ Solid {
                 DEF SUPORT_2 Transform {
                   translation 0.146 0 0.129
                   rotation 0 1 0 1.5708003061004252
+                  children [
+                    Shape {
+                      appearance USE L_COLOR_LATERAL
+                      geometry USE L_LATERAL_SUPORT1
+                    }
+                  ]
+                }
+                Transform {
+                  translation -0.146 0 0.13
+                  rotation 0 1 0 1.5707996938995747
+                  children [
+                    Shape {
+                      appearance USE L_COLOR_LATERAL
+                      geometry USE L_LATERAL_SUPORT1
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0 0 0.274
                   children [
                     Shape {
                       appearance USE L_COLOR_LATERAL
