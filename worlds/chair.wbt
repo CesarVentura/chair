@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.45947787081573277 0.7493119225545315 0.47687705852585605 4.379522158755659
-  position -0.4459056313973554 1.0785560984138767 0.1108638692437481
+  orientation 0.46745178904573376 0.8833023892362879 -0.03557687573983956 6.177078753010825
+  position -0.010832723283180669 0.6568315535685892 0.9111845203274915
 }
 TexturedBackground {
 }
@@ -12,11 +12,13 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.14 0
+  translation 0 0.35 0
   children [
     Group {
       children [
         DEF S_STANDINGBAR_1 Transform {
+          translation 0.15261449364379612 -0.02786387328654836 0.1526865804004062
+          rotation -0.19048818460558886 0.9784075434338305 -0.08020555141287952 2.3562003061004253
           children [
             Shape {
               appearance DEF C_COLORSTANDING_BAR PBRAppearance {
@@ -30,7 +32,8 @@ Solid {
           ]
         }
         DEF S-_STANDINGBAR_2 Transform {
-          translation 0.4 0 0
+          translation 0.14568028435446934 -0.028570558296200355 -0.13715493670709358
+          rotation -0.3853482589722522 0.8991398414544626 -0.20749521636967427 -0.7691003061004253
           children [
             Shape {
               appearance USE C_COLORSTANDING_BAR
@@ -39,7 +42,8 @@ Solid {
           ]
         }
         DEF S_STANDINGBAR_3 Transform {
-          translation 0 0 0.4
+          translation -0.1474815381525864 -0.028714306143575192 -0.140235886176533
+          rotation -0.08478312121903296 -0.9836969388364664 -0.15859430910383812 2.4590503061004254
           children [
             Shape {
               appearance USE C_COLORSTANDING_BAR
@@ -48,7 +52,8 @@ Solid {
           ]
         }
         DEF S_STANDINGBAR_4 Transform {
-          translation 0.4 0 0.4
+          translation -0.1474177542130004 -0.028412716833790923 0.1474378442879167
+          rotation -0.0759253975193457 -0.982563967897415 0.16971559445500803 3.8512496938995744
           children [
             Shape {
               appearance USE C_COLORSTANDING_BAR
@@ -57,7 +62,7 @@ Solid {
           ]
         }
         DEF BIG_SUPORT Transform {
-          translation 0.19 0.2 0.09
+          translation 0 0.05 -0.125
           children [
             Group {
               children [
@@ -106,28 +111,8 @@ Solid {
             }
           ]
         }
-        DEF APB_SIT Transform {
-          children [
-            Group {
-              children [
-                Transform {
-                  translation 0 0.35 0
-                  children [
-                    Shape {
-                      appearance PBRAppearance {
-                      }
-                      geometry Cylinder {
-                        height 0.01
-                        radius 0.15
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
         DEF SMALL_SUPORT Transform {
+          translation 0 0.296 -0.08
           children [
             Group {
               children [
@@ -176,7 +161,30 @@ Solid {
             }
           ]
         }
+        Transform {
+          children [
+            Group {
+              children [
+                Transform {
+                  translation 0 0.309 0
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.3
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
+  physics Physics {
+  }
 }
