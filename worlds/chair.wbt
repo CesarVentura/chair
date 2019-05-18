@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.6211172938776301 0.7093750468374349 0.3331671504973395 4.970259509854988
-  position -0.982373640491984 2.0868046857526585 1.6664394467520536
+  orientation 0.45947787081573277 0.7493119225545315 0.47687705852585605 4.379522158755659
+  position -0.4459056313973554 1.0785560984138767 0.1108638692437481
 }
 TexturedBackground {
 }
@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.1 0
+  translation 0 0.14 0
   children [
     Group {
       children [
@@ -56,7 +56,7 @@ Solid {
             }
           ]
         }
-        DEF B_SUPORTS_STANDINGS Transform {
+        DEF BIG_SUPORT Transform {
           translation 0.19 0.2 0.09
           children [
             Group {
@@ -106,7 +106,7 @@ Solid {
             }
           ]
         }
-        Transform {
+        DEF APB_SIT Transform {
           children [
             Group {
               children [
@@ -120,6 +120,55 @@ Solid {
                         height 0.01
                         radius 0.15
                       }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        DEF SMALL_SUPORT Transform {
+          children [
+            Group {
+              children [
+                Transform {
+                  children [
+                    Shape {
+                      appearance DEF M_COLOR_SMAL-SUPORT PBRAppearance {
+                        baseColor 0.45098039215686275 0.8235294117647058 0.08627450980392157
+                      }
+                      geometry DEF M_SMALL_SUPORT Box {
+                        size 0.15 0.01 0.01
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0.08 0 0.08
+                  rotation 0 1 0 1.5707996938995747
+                  children [
+                    Shape {
+                      appearance USE M_COLOR_SMAL-SUPORT
+                      geometry USE M_SMALL_SUPORT
+                    }
+                  ]
+                }
+                Transform {
+                  translation -0.08 0 0.08
+                  rotation 0 1 0 1.5707996938995747
+                  children [
+                    Shape {
+                      appearance USE M_COLOR_SMAL-SUPORT
+                      geometry USE M_SMALL_SUPORT
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0 0 0.16
+                  children [
+                    Shape {
+                      appearance USE M_COLOR_SMAL-SUPORT
+                      geometry USE M_SMALL_SUPORT
                     }
                   ]
                 }
