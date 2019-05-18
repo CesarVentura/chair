@@ -1,0 +1,92 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.2071762616613898 0.967518592879241 0.144864657653221 4.990682281183459
+  position -0.5833912929583241 0.3311549264922326 0.30319389568424865
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  translation 0 0.1 0
+  children [
+    Group {
+      children [
+        DEF S_STANDINGBAR_1 Transform {
+          children [
+            Shape {
+              appearance DEF C_COLORSTANDING_BAR PBRAppearance {
+                baseColor 0 0 0
+              }
+              geometry DEF S_STANDIN_BAR Cylinder {
+                height 0.7
+                radius 0.01
+              }
+            }
+          ]
+        }
+        DEF S-_STANDINGBAR_2 Transform {
+          translation 0.4 0 0
+          children [
+            Shape {
+              appearance USE C_COLORSTANDING_BAR
+              geometry USE S_STANDIN_BAR
+            }
+          ]
+        }
+        DEF S_STANDINGBAR_3 Transform {
+          translation 0 0 0.4
+          children [
+            Shape {
+              appearance USE C_COLORSTANDING_BAR
+              geometry USE S_STANDIN_BAR
+            }
+          ]
+        }
+        DEF S_STANDINGBAR_4 Transform {
+          translation 0.4 0 0.4
+          children [
+            Shape {
+              appearance USE C_COLORSTANDING_BAR
+              geometry USE S_STANDIN_BAR
+            }
+          ]
+        }
+        DEF B_SUPORTS_STANDINGS Transform {
+          children [
+            Group {
+              children [
+                Transform {
+                  translation 0 0 -0.015
+                  children [
+                    Shape {
+                      appearance DEF L_COLOR_LATERAL PBRAppearance {
+                      }
+                      geometry DEF L_LATERAL_SUPORT1 Box {
+                        size 0.28 0.01 0.01
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0.146 0 0.129
+                  rotation 0 1 0 1.5708003061004252
+                  children [
+                    Shape {
+                      appearance USE L_COLOR_LATERAL
+                      geometry USE L_LATERAL_SUPORT1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
